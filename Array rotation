@@ -1,0 +1,30 @@
+import java.util.Scanner;
+class Rotation
+{
+    public static void main (String args[])
+    {
+        int a[]  = new int[1000000];
+        int i=0,j,k,y;
+        int temp;
+       
+        Scanner input=new Scanner(System.in);
+        int n= input.nextInt();
+          y= input.nextInt();
+        for(k=0;k<n;k++)
+        {
+             a[k]=input.nextInt(); 
+        }
+        for(j=0;j<y;j++)
+        { temp=a[0];
+        for(i=0;i<n-1;i++)
+        {
+            a[i]=a[i+1];
+        }
+            a[n-1]=temp;
+        }
+        for(i=0;i<n;i++)
+        {
+            System.out.print(a[i]+" ");
+        }
+    }
+}
